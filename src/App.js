@@ -11,7 +11,7 @@ const App = () => {
       return false
     }
   })
- 
+
   // React Title function.
   React.useEffect(() => {
     if (!isStatus) {
@@ -51,15 +51,15 @@ const App = () => {
         horizontal: 'right'
       }} onClose={handleClose}>
         <Alert variant="filled" severity="success" onClose={handleClose}>
-          Wow.Your are in Online.
+        "Great! You're now connected to the internet."
         </Alert>
       </Snackbar>) : (<Snackbar open={isOpen} sx={{ maxWidth: "90%", margin: "0 auto" }} autoHideDuration={4000} anchorOrigin={{
         vertical: 'top',
         horizontal: 'right'
       }} onClose={handleClose}>
         <Alert variant="filled" severity="error" onClose={handleClose}>
-          You are offline. Please check your connectivity.
-        </Alert>
+          "Looks like you're not connected to the internet. Please verify your connection."
+         </Alert>
       </Snackbar>)}
 
     </div>
