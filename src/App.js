@@ -15,9 +15,9 @@ const App = () => {
   // React Title function.
   React.useEffect(() => {
     if (!isStatus) {
-      document.title = "Your are in Offline"
+      document.title = "You are currently offline.:("
     } else {
-      document.title = "Your are in Online"
+      document.title = "You are currently connected to the internet."
     }
   }, [isStatus])
 
@@ -26,7 +26,7 @@ const App = () => {
       setIsStatus(true)
     };
     window.onoffline = () => {
-      console.log("Your are in OffLine");
+      console.log("You are currently offline.");
       setIsStatus(false)
     }
   }, [isStatus])
